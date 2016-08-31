@@ -1,0 +1,98 @@
+/* Start Template CSS fixes */
+.ut-layout-full-width-layout .nav-holder,
+.ut-layout-full-width-layout .ultimatum-menu-nav > li {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+/* End Template CSS fixes */
+.ut-layout-full-width-layout .navbar-brand {
+    height: auto !important;
+}
+/* Top Padding Row - for when Menu Row is or is not sticky . This is the Welcome to ... row that has padding at the bottom.
+*  The padding expands to include the default 10px padding always on this row, plus the 50px (46px height plus 2 x 2px top/bottom
+*  borders) of the green sticky menu, plus the 46px of the sticky cart row == 106px. */
+.ut-layout-full-width-layout .scroll-row-padding {padding-bottom: 10px;}
+.ut-layout-full-width-layout .scrolled-row-padding {padding-bottom: 106px;}
+/* End of Top Padding Row */
+/* Green Nav Row */
+/* Sticky settings for green nav row */
+.ut-layout-full-width-layout .scroll-menu-row {
+    transition: all 1s ease 0s;
+    position: relative;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    background: #ffffff;
+    box-shadow: 0 0 50px 100px transparent;
+}
+.ut-layout-full-width-layout .scrolled-menu-row {
+    transition: all 1s ease 0s;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+}
+/* End of Green Nav Row */
+/* Cart Nav Row */
+/* Sticky settings for cart row */
+.ut-layout-full-width-layout .scrolled-cart-menu-row {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 9998;
+    background: #fff;
+}
+/* End of Cart Nav Row */
+/* Logo */
+.ut-layout-full-width-layout #logo-container {position: absolute;}
+.ut-layout-full-width-layout .scroll-logo-row #logo-container {
+    transition: all 1s ease 0s;
+    margin-top: -90px;
+}
+.ut-layout-full-width-layout .scrolled-logo-row #logo-container {
+    transition: all .5s ease 0s;
+    margin-top: 0;
+}
+.ut-layout-full-width-layout .scrolled-logo-row #logo-container img {
+    transition: all 2s ease 0s;
+    width: 132px;
+}
+.ut-layout-full-width-layout .scrolled-logo-row {
+    transition: all 2s ease 0s;
+    position: fixed;
+    top: 5px;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+}
+/* End of Logo */
+/* Nav items styling */
+.ut-layout-full-width-layout .nav-search-form .search-button input[type="submit"] {
+    background: #004132 !important;
+}
+.ut-layout-full-width-layout .ultimatum-menu-nav > li > a {
+    transition: all .5s ease 0s;
+    color: #004132;
+    outline: none;
+    /* Set height of the nav */
+    line-height: 46px;
+}
+/* Set the height of the nav, which gets smaller when it becomes sticky  */
+.ut-layout-full-width-layout .scroll-menu-row .ultimatum-menu-nav > li > a {
+    transition: all .5s ease 0s;
+    line-height: 67px;
+}
+.ut-layout-full-width-layout .ultimatum-menu-nav > li > a:hover,
+.ut-layout-full-width-layout .ultimatum-menu-nav > li > a:focus {
+    text-decoration: none !important;
+}
+.ut-layout-full-width-layout .ultimatum-menu-nav > li.menu-item:hover,
+.ut-layout-flexbox-menus .ultimatum-menu-nav > li.menu-item:focus {
+    background: #d3e2e0;
+}
+.ut-layout-full-width-layout .ultimatum-menu-nav > li.navbar-brand:hover,
+.ut-layout-full-width-layout .ultimatum-menu-nav > li.navbar-brand:focus {
+    background: none;
+}
+/* End of nav items styling */
