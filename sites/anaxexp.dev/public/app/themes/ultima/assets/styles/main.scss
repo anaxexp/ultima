@@ -1,8 +1,9 @@
 @import "common/variables";
 
-// Import npm dependencies
-@import "~bootstrap/scss/bootstrap";
-@import "~font-awesome/scss/font-awesome";
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
 
 @import "common/global";
 @import "components/buttons";
@@ -16,3 +17,7 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "child";
+@import "components/ult-flexbox-menu";
+@import "components/scroll-to-fixed";
+

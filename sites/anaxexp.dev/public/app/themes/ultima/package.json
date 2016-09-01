@@ -18,6 +18,11 @@
     }
   ],
   "scripts": {
+    "postinstall": "npm run typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "start": "concurrent \"npm run tsc:w\" ",
+    "typings": "typings",
     "build:production": "webpack -p --progress --release",
     "build": "webpack -d --progress",
     "watch": "node watch.js --watch",
@@ -62,10 +67,14 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14",
     "webpack-dev-middleware": "^1.6",
-    "webpack-hot-middleware": "^2.10.0"
+    "webpack-hot-middleware": "^2.10.0",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3"
   },
   "dependencies": {
-    "bootstrap": "github:twbs/bootstrap#v4-dev",
+    "bootstrap": "github:twbs/bootstrap-sass",
+    "concurrently": "^1.0.0",
+    "dalogga": "^0.8.7",
     "font-awesome": "^4.6.3",
     "jquery": "^1.12.4"
   }

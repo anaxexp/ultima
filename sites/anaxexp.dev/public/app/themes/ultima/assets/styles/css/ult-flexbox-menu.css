@@ -1,0 +1,39 @@
+/* Start Template CSS fixes */
+.nav-holder,
+.ultimatum-menu-nav > li {
+    padding: 0 !important;
+    float: none !important;
+}
+/* End Template CSS fixes */
+/* Start FlexBox menu CSS */
+.justify-content-center,
+.justify-content-end,
+.justify-content-start,
+.align-items-center .ultimatum-menu-nav,
+.align-items-center .ultimatum-menu-nav > li,
+.flex-grow .ultimatum-menu-nav > li > a {
+    -js-display: flex;         /* Flexibility - IE 8 & 9 */
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.flex-grow .ultimatum-menu-nav > li > a,
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-end {justify-content: flex-end;}
+.justify-content-start {justify-content: flex-start;}
+.align-items-center .ultimatum-menu-nav > li {
+    align-items: center;
+    text-align: center;
+}
+.flex-grow .ultimatum-menu-nav > li,
+.flex-grow .ultimatum-menu-nav > li > a {
+    flex-grow:1;
+}
+.ultimatum-menu-nav > li.navbar-brand,
+.ultimatum-menu-nav > li.nav-search {
+    flex-grow: 0;
+}

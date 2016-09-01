@@ -2,11 +2,19 @@
   "entry": {
     "main": [
       "./scripts/util/public-path.js",
-      "./scripts/main.js",
       "./styles/main.scss"
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "scroll-to-fixed": [
+      "./scripts/lib/scroll-to-fixed.js"
+    ],
+    "flexibility": [
+      "./scripts/lib/flexibility.js"
+    ],
+    "classie": [
+      "./scripts/lib/classie.js"
     ]
   },
   "publicPath": "/app/themes/ultima",

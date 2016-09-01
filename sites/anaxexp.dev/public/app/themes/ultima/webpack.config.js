@@ -24,7 +24,7 @@ var scriptsFilename = (argv.release) ? 'scripts/[name]_[hash].js' : 'scripts/[na
 
 jsLoader = {
   test: /\.js$/,
-  exclude: [ /(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/ ],
+  exclude: [ /(node_modules|bower_components)(?![/|\\](bootstrap|bootstrap-scss|foundation-sites))/ ],
   loaders: [ 'babel?presets[]='+path.resolve('./node_modules/babel-preset-es2015')+'&cacheDirectory' ]
 };
 
@@ -67,9 +67,9 @@ var addHotMiddleware = function (entry) {
   var name,
       results = {},
       hotMiddlewareScript = 'webpack-hot-middleware/client?' + qs.stringify({
-        timeout: 20000,
-        reload: true
-      });
+            timeout: 20000,
+            reload: true
+          });
 
   for (name in entry) {
     if (entry.hasOwnProperty(name)) {
@@ -92,12 +92,20 @@ webpackConfig = {
     publicPath: path.join(config.publicPath, dist),
     filename: scriptsFilename
   },
+  node: {
+    fs: "empty"
+  },
   module: {
     preLoaders: [
       {
         test: /\.js?$/,
         include: path.resolve(assets),
         loader: 'eslint'
+      },
+      {
+          test: /\.json$/,
+          exclude: /node_modules/,
+          loader: 'json'
       }
     ],
     loaders: [

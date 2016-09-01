@@ -12,12 +12,12 @@ Author URI: http://twitter.com/hellominti/
 class widget_contact extends WP_Widget { 
 	
 	// Widget Settings
-	function widget_contact() {
+
+	function __construct() {
 		$widget_ops = array('description' => __('Display your Contact Informations') );
 		$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'contact' );
-		$this->WP_Widget( 'contact', __('minti.Contact'), $widget_ops, $control_ops );
+		parent::__construct(false, $name = 'Ultima Contact');
 	}
-	
 	// Widget Output
 	function widget($args, $instance) {
 		extract($args);

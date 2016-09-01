@@ -54,13 +54,13 @@ add_action('after_switch_theme', function () {
 		update_option('stylesheet', $stylesheet . '/templates');
 	}
 });
-
+*/
 add_action('customize_render_section', function ($section) {
 	if ($section->type === 'themes') {
 		$section->title = wp_get_theme(basename(__DIR__))->display('Name');
 	}
 }, 10, 2);
-*/
+
 array_walk($theme['theme_includes'], function ($file) {
 	if (!locate_template($file, true, true)) {
 		trigger_error(sprintf(__('Error locating %s for inclusion', TEXT_DOMAIN), $file), E_USER_ERROR);
